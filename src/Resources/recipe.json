@@ -1,0 +1,133 @@
+{
+    "featured": {
+        "main": [
+            {
+                "id": 0,
+                "name": "Crispy Fried Chicken",
+                "category": "meat",
+                "image": "food_chicken",
+                "definition": "It's the all-American meal. Find out how to make juicy fried chicken with a crispy golden crust every time.",
+                "materials": "Beer Batter, Chicken, Baked BBQ Fried Chicken",
+                "preparation": "This is how to get breading to stay on chicken. Set up a dredging station to minimize mess and make cleanup easy.\n\nPut your ingredients and mixtures into large shallow bowls or baking dishes. Then work in one direction (left to right, for example), moving from seasoned flour to egg batter over to bread crumbs/panko/coating mixture.\n\nThis dry-wet-dry method helps the ingredients stick to the chicken pieces. Have one wet hand and one dry hand -- and use your wet hand to transfer chicken from the wet mixture to the coating bowl.\n\nPlace the coated chicken on the parchment- or wax paper-lined baking sheet. Before easing the coated chicken pieces into hot fat, allow them to rest, which will give the coating a chance to adhere.\n\nDo this step in the refrigerator if you won't be frying the chicken within half an hour. (Allow the cold chicken to come to room temperature before frying or the oil temperature will drop and the chicken will cook unevenly and the coating won't get crispy.)",
+                "time": "15dk",
+                "rate": 4.2,
+                "total_rate": 18252,
+                "user_rate": 8.2
+            },
+            {
+                "id": 1,
+                "name": "Mercimek Çorbası",
+                "category": "soup",
+                "image": "food_soup",
+                "definition": "A delicious, spicy blend, packed full of iron and low fat to boot. It's ready in under half an hour or can be made in a slow cooker",
+                "materials": "2 tsp cumin seeds, pinch chilli flakes, 2 tbsp olive oil, 600g carrots, washed and coarsely grated (no need to peel), 140g split red lentils, 1l hot vegetable stock (from a cube is fine), 125ml milk (to make it dairy-free, see 'try' below), plain yogurt, naan bread, to serve",
+                "preparation": "Heat a large saucepan and dry-fry 2 tsp cumin seeds and a pinch of chilli flakes for 1 min, or until they start to jump around the pan and release their aromas. Scoop out about half with a spoon and set aside.\n\nAdd 2 tbsp olive oil, 600g coarsely grated carrots, 140g split red lentils, 1l hot vegetable stock and 125ml milk to the pan and bring to the boil.\n\nSimmer for 15 mins until the lentils have swollen and softened. Whizz the soup with a stick blender or in a food processor until smooth (or leave it chunky if you prefer).\n\nSeason to taste and finish with a dollop of plain yogurt and a sprinkling of the reserved toasted spices. Serve with warmed naan breads.",
+                "time": "15dk",
+                "rate": 9.2,
+                "total_rate": 124229,
+                "user_rate": 10
+            }
+        ],
+        "categories": [
+            {
+                "category_name": "Sıcacık Lezzetler",
+                "items": [
+                    {
+                        "id": 0,
+                        "name": "Crispy Fried Chicken",
+                        "category": "meat",
+                        "image": "food_chicken",
+                        "definition": "It's the all-American meal. Find out how to make juicy fried chicken with a crispy golden crust every time.",
+                        "materials": "Beer Batter, Chicken, Baked BBQ Fried Chicken",
+                        "preparation": "This is how to get breading to stay on chicken. Set up a dredging station to minimize mess and make cleanup easy.\n\nPut your ingredients and mixtures into large shallow bowls or baking dishes. Then work in one direction (left to right, for example), moving from seasoned flour to egg batter over to bread crumbs/panko/coating mixture.\n\nThis dry-wet-dry method helps the ingredients stick to the chicken pieces. Have one wet hand and one dry hand -- and use your wet hand to transfer chicken from the wet mixture to the coating bowl.\n\nPlace the coated chicken on the parchment- or wax paper-lined baking sheet. Before easing the coated chicken pieces into hot fat, allow them to rest, which will give the coating a chance to adhere.\n\nDo this step in the refrigerator if you won't be frying the chicken within half an hour. (Allow the cold chicken to come to room temperature before frying or the oil temperature will drop and the chicken will cook unevenly and the coating won't get crispy.)",
+                        "time": "15dk",
+                        "rate": 4.2,
+                        "total_rate": 18252,
+                        "user_rate": 8.2
+                    },
+                    {
+                        "id": 1,
+                        "name": "Mercimek Çorbası",
+                        "category": "soup",
+                        "image": "food_soup",
+                        "definition": "A delicious, spicy blend, packed full of iron and low fat to boot. It's ready in under half an hour or can be made in a slow cooker",
+                        "materials": "2 tsp cumin seeds, pinch chilli flakes, 2 tbsp olive oil, 600g carrots, washed and coarsely grated (no need to peel), 140g split red lentils, 1l hot vegetable stock (from a cube is fine), 125ml milk (to make it dairy-free, see 'try' below), plain yogurt, naan bread, to serve",
+                        "preparation": "Heat a large saucepan and dry-fry 2 tsp cumin seeds and a pinch of chilli flakes for 1 min, or until they start to jump around the pan and release their aromas. Scoop out about half with a spoon and set aside.\n\nAdd 2 tbsp olive oil, 600g coarsely grated carrots, 140g split red lentils, 1l hot vegetable stock and 125ml milk to the pan and bring to the boil.\n\nSimmer for 15 mins until the lentils have swollen and softened. Whizz the soup with a stick blender or in a food processor until smooth (or leave it chunky if you prefer).\n\nSeason to taste and finish with a dollop of plain yogurt and a sprinkling of the reserved toasted spices. Serve with warmed naan breads.",
+                        "time": "15dk",
+                        "rate": 9.2,
+                        "total_rate": 124229,
+                        "user_rate": 10
+                    },
+                    {
+                        "id": 2,
+                        "name": "İtalyan Pizza",
+                        "category": "pizza",
+                        "image": "food_pizza",
+                        "definition": "A delicious, spicy blend, packed full of iron and low fat to boot. It's ready in under half an hour or can be made in a slow cooker",
+                        "materials": "2 tsp cumin seeds, pinch chilli flakes, 2 tbsp olive oil, 600g carrots, washed and coarsely grated (no need to peel), 140g split red lentils, 1l hot vegetable stock (from a cube is fine), 125ml milk (to make it dairy-free, see 'try' below), plain yogurt, naan bread, to serve",
+                        "preparation": "This is how to get breading to stay on chicken. Set up a dredging station to minimize mess and make cleanup easy. Put your ingredients and mixtures into large shallow bowls or baking dishes. Then work in one direction (left to right, for example), moving from seasoned flour to egg batter over to bread crumbs/panko/coating mixture. This dry-wet-dry method helps the ingredients stick to the chicken pieces. Have one wet hand and one dry hand -- and use your wet hand to transfer chicken from the wet mixture to the coating bowl. Place the coated chicken on the parchment- or wax paper-lined baking sheet. Before easing the coated chicken pieces into hot fat, allow them to rest, which will give the coating a chance to adhere. Do this step in the refrigerator if you won't be frying the chicken within half an hour. (Allow the cold chicken to come to room temperature before frying or the oil temperature will drop and the chicken will cook unevenly and the coating won't get crispy.)",
+                        "time": "15dk",
+                        "rate": 8.6,
+                        "total_rate": 2491252,
+                        "user_rate": null
+                    }
+                ]
+            }
+        ]
+    },
+    "recipes":
+    [
+        {
+            "id": 0,
+            "name": "Crispy Fried Chicken",
+            "category": "meat",
+            "image": "food_chicken",
+            "definition": "It's the all-American meal. Find out how to make juicy fried chicken with a crispy golden crust every time.",
+            "materials": "Beer Batter, Chicken, Baked BBQ Fried Chicken",
+            "preparation": "This is how to get breading to stay on chicken. Set up a dredging station to minimize mess and make cleanup easy.\n\nPut your ingredients and mixtures into large shallow bowls or baking dishes. Then work in one direction (left to right, for example), moving from seasoned flour to egg batter over to bread crumbs/panko/coating mixture.\n\nThis dry-wet-dry method helps the ingredients stick to the chicken pieces. Have one wet hand and one dry hand -- and use your wet hand to transfer chicken from the wet mixture to the coating bowl.\n\nPlace the coated chicken on the parchment- or wax paper-lined baking sheet. Before easing the coated chicken pieces into hot fat, allow them to rest, which will give the coating a chance to adhere.\n\nDo this step in the refrigerator if you won't be frying the chicken within half an hour. (Allow the cold chicken to come to room temperature before frying or the oil temperature will drop and the chicken will cook unevenly and the coating won't get crispy.)",
+            "time": "15dk",
+            "rate": 4.2,
+            "total_rate": 18252,
+            "user_rate": 8.2
+        },
+        {
+            "id": 1,
+            "name": "Mercimek Çorbası",
+            "category": "soup",
+            "image": "food_soup",
+            "definition": "A delicious, spicy blend, packed full of iron and low fat to boot. It's ready in under half an hour or can be made in a slow cooker",
+            "materials": "2 tsp cumin seeds, pinch chilli flakes, 2 tbsp olive oil, 600g carrots, washed and coarsely grated (no need to peel), 140g split red lentils, 1l hot vegetable stock (from a cube is fine), 125ml milk (to make it dairy-free, see 'try' below), plain yogurt, naan bread, to serve",
+            "preparation": "Heat a large saucepan and dry-fry 2 tsp cumin seeds and a pinch of chilli flakes for 1 min, or until they start to jump around the pan and release their aromas. Scoop out about half with a spoon and set aside.\n\nAdd 2 tbsp olive oil, 600g coarsely grated carrots, 140g split red lentils, 1l hot vegetable stock and 125ml milk to the pan and bring to the boil.\n\nSimmer for 15 mins until the lentils have swollen and softened. Whizz the soup with a stick blender or in a food processor until smooth (or leave it chunky if you prefer).\n\nSeason to taste and finish with a dollop of plain yogurt and a sprinkling of the reserved toasted spices. Serve with warmed naan breads.",
+            "time": "15dk",
+            "rate": 9.2,
+            "total_rate": 124229,
+            "user_rate": 10
+        },
+        {
+            "id": 2,
+            "name": "İtalyan Pizza",
+            "category": "pizza",
+            "image": "food_pizza",
+            "definition": "A delicious, spicy blend, packed full of iron and low fat to boot. It's ready in under half an hour or can be made in a slow cooker",
+            "materials": "2 tsp cumin seeds, pinch chilli flakes, 2 tbsp olive oil, 600g carrots, washed and coarsely grated (no need to peel), 140g split red lentils, 1l hot vegetable stock (from a cube is fine), 125ml milk (to make it dairy-free, see 'try' below), plain yogurt, naan bread, to serve",
+            "preparation": "This is how to get breading to stay on chicken. Set up a dredging station to minimize mess and make cleanup easy. Put your ingredients and mixtures into large shallow bowls or baking dishes. Then work in one direction (left to right, for example), moving from seasoned flour to egg batter over to bread crumbs/panko/coating mixture. This dry-wet-dry method helps the ingredients stick to the chicken pieces. Have one wet hand and one dry hand -- and use your wet hand to transfer chicken from the wet mixture to the coating bowl. Place the coated chicken on the parchment- or wax paper-lined baking sheet. Before easing the coated chicken pieces into hot fat, allow them to rest, which will give the coating a chance to adhere. Do this step in the refrigerator if you won't be frying the chicken within half an hour. (Allow the cold chicken to come to room temperature before frying or the oil temperature will drop and the chicken will cook unevenly and the coating won't get crispy.)",
+            "time": "15dk",
+            "rate": 8.6,
+            "total_rate": 2491252,
+            "user_rate": null
+        },
+        {
+            "id": 3,
+            "name": "Amerikano",
+            "category": "coffee",
+            "image": "food_amerikano",
+            "definition": "A delicious, spicy blend, packed full of iron and low fat to boot. It's ready in under half an hour or can be made in a slow cooker",
+            "materials": "2 tsp cumin seeds, pinch chilli flakes, 2 tbsp olive oil, 600g carrots, washed and coarsely grated (no need to peel), 140g split red lentils, 1l hot vegetable stock (from a cube is fine), 125ml milk (to make it dairy-free, see 'try' below), plain yogurt, naan bread, to serve",
+            "preparation": "Heat a large saucepan and dry-fry 2 tsp cumin seeds and a pinch of chilli flakes for 1 min, or until they start to jump around the pan and release their aromas. Scoop out about half with a spoon and set aside.\n\nAdd 2 tbsp olive oil, 600g coarsely grated carrots, 140g split red lentils, 1l hot vegetable stock and 125ml milk to the pan and bring to the boil.\n\nSimmer for 15 mins until the lentils have swollen and softened. Whizz the soup with a stick blender or in a food processor until smooth (or leave it chunky if you prefer).\n\nSeason to taste and finish with a dollop of plain yogurt and a sprinkling of the reserved toasted spices. Serve with warmed naan breads.",
+            "time": "15dk",
+            "rate": 45,
+            "total_rate": 124212,
+            "user_rate": null
+        }
+    ]
+}

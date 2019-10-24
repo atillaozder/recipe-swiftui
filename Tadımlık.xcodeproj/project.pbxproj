@@ -9,21 +9,55 @@
 /* Begin PBXBuildFile section */
 		FB2005FA2361B071000DC311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2005F92361B071000DC311 /* AppDelegate.swift */; };
 		FB2005FC2361B071000DC311 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2005FB2361B071000DC311 /* SceneDelegate.swift */; };
-		FB2005FE2361B071000DC311 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2005FD2361B071000DC311 /* ContentView.swift */; };
 		FB2006002361B072000DC311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2005FF2361B072000DC311 /* Assets.xcassets */; };
 		FB2006032361B072000DC311 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2006022361B072000DC311 /* Preview Assets.xcassets */; };
 		FB2006062361B072000DC311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2006042361B072000DC311 /* LaunchScreen.storyboard */; };
+		FB5653C62361C50F00472FE8 /* CategoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5653C52361C50F00472FE8 /* CategoryList.swift */; };
+		FBA965BE2361B14300B7A632 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965BC2361B14300B7A632 /* ApiService.swift */; };
+		FBA965BF2361B14300B7A632 /* URLRequestConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965BD2361B14300B7A632 /* URLRequestConvertible.swift */; };
+		FBA965C22361B14B00B7A632 /* RecipeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965C02361B14B00B7A632 /* RecipeRouter.swift */; };
+		FBA965C32361B14B00B7A632 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965C12361B14B00B7A632 /* Recipe.swift */; };
+		FBA965C52361B15300B7A632 /* recipe.json in Resources */ = {isa = PBXBuildFile; fileRef = FBA965C42361B15300B7A632 /* recipe.json */; };
+		FBA965CC2361B15B00B7A632 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965C62361B15B00B7A632 /* FavoriteButton.swift */; };
+		FBA965CD2361B15B00B7A632 /* FeaturedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965C72361B15B00B7A632 /* FeaturedList.swift */; };
+		FBA965CE2361B15B00B7A632 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965C82361B15B00B7A632 /* HomeView.swift */; };
+		FBA965CF2361B15B00B7A632 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965C92361B15B00B7A632 /* LoadingView.swift */; };
+		FBA965D02361B15B00B7A632 /* RecipeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965CA2361B15B00B7A632 /* RecipeDetail.swift */; };
+		FBA965D12361B15B00B7A632 /* RecipeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965CB2361B15B00B7A632 /* RecipeList.swift */; };
+		FBA965D62361B16500B7A632 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965D22361B16500B7A632 /* UserData.swift */; };
+		FBA965D72361B16500B7A632 /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965D32361B16500B7A632 /* RecipeViewModel.swift */; };
+		FBA965D82361B16500B7A632 /* FeaturedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965D42361B16500B7A632 /* FeaturedViewModel.swift */; };
+		FBA965D92361B16500B7A632 /* RecipeRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965D52361B16500B7A632 /* RecipeRowViewModel.swift */; };
+		FBA965E32361B23200B7A632 /* FavoriteList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965E12361B23200B7A632 /* FavoriteList.swift */; };
+		FBA965E52361B2C300B7A632 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA965E42361B2C300B7A632 /* ExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB2005F62361B071000DC311 /* Tadımlık.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tadımlık.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2005F92361B071000DC311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB2005FB2361B071000DC311 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FB2005FD2361B071000DC311 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB2005FF2361B072000DC311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB2006022361B072000DC311 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB2006052361B072000DC311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB2006072361B072000DC311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB5653C52361C50F00472FE8 /* CategoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryList.swift; sourceTree = "<group>"; };
+		FBA965BC2361B14300B7A632 /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		FBA965BD2361B14300B7A632 /* URLRequestConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestConvertible.swift; sourceTree = "<group>"; };
+		FBA965C02361B14B00B7A632 /* RecipeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRouter.swift; sourceTree = "<group>"; };
+		FBA965C12361B14B00B7A632 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		FBA965C42361B15300B7A632 /* recipe.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipe.json; sourceTree = "<group>"; };
+		FBA965C62361B15B00B7A632 /* FavoriteButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
+		FBA965C72361B15B00B7A632 /* FeaturedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedList.swift; sourceTree = "<group>"; };
+		FBA965C82361B15B00B7A632 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FBA965C92361B15B00B7A632 /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		FBA965CA2361B15B00B7A632 /* RecipeDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeDetail.swift; sourceTree = "<group>"; };
+		FBA965CB2361B15B00B7A632 /* RecipeList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeList.swift; sourceTree = "<group>"; };
+		FBA965D22361B16500B7A632 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FBA965D32361B16500B7A632 /* RecipeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		FBA965D42361B16500B7A632 /* FeaturedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedViewModel.swift; sourceTree = "<group>"; };
+		FBA965D52361B16500B7A632 /* RecipeRowViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecipeRowViewModel.swift; sourceTree = "<group>"; };
+		FBA965E12361B23200B7A632 /* FavoriteList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteList.swift; sourceTree = "<group>"; };
+		FBA965E42361B2C300B7A632 /* ExploreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +74,7 @@
 		FB2005ED2361B071000DC311 = {
 			isa = PBXGroup;
 			children = (
-				FB2005F82361B071000DC311 /* Tadımlık */,
+				FB2005F82361B071000DC311 /* src */,
 				FB2005F72361B071000DC311 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,18 +87,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FB2005F82361B071000DC311 /* Tadımlık */ = {
+		FB2005F82361B071000DC311 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				FB2005F92361B071000DC311 /* AppDelegate.swift */,
-				FB2005FB2361B071000DC311 /* SceneDelegate.swift */,
-				FB2005FD2361B071000DC311 /* ContentView.swift */,
-				FB2005FF2361B072000DC311 /* Assets.xcassets */,
-				FB2006042361B072000DC311 /* LaunchScreen.storyboard */,
+				FBA965E12361B23200B7A632 /* FavoriteList.swift */,
+				FB5653C52361C50F00472FE8 /* CategoryList.swift */,
+				FB20060D2361B079000DC311 /* Resources */,
+				FB20060E2361B08C000DC311 /* App */,
+				FBA965BB2361B13200B7A632 /* Api */,
+				FB2006112361B09A000DC311 /* ViewModel */,
+				FB2006102361B097000DC311 /* View */,
+				FB20060F2361B093000DC311 /* Model */,
 				FB2006072361B072000DC311 /* Info.plist */,
 				FB2006012361B072000DC311 /* Preview Content */,
 			);
-			path = "Tadımlık";
+			path = src;
 			sourceTree = "<group>";
 		};
 		FB2006012361B072000DC311 /* Preview Content */ = {
@@ -73,6 +110,68 @@
 				FB2006022361B072000DC311 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB20060D2361B079000DC311 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FBA965C42361B15300B7A632 /* recipe.json */,
+				FB2005FF2361B072000DC311 /* Assets.xcassets */,
+				FB2006042361B072000DC311 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FB20060E2361B08C000DC311 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FB2005F92361B071000DC311 /* AppDelegate.swift */,
+				FB2005FB2361B071000DC311 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FB20060F2361B093000DC311 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBA965D22361B16500B7A632 /* UserData.swift */,
+				FBA965C12361B14B00B7A632 /* Recipe.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FB2006102361B097000DC311 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBA965C62361B15B00B7A632 /* FavoriteButton.swift */,
+				FBA965C72361B15B00B7A632 /* FeaturedList.swift */,
+				FBA965C82361B15B00B7A632 /* HomeView.swift */,
+				FBA965E42361B2C300B7A632 /* ExploreView.swift */,
+				FBA965C92361B15B00B7A632 /* LoadingView.swift */,
+				FBA965CB2361B15B00B7A632 /* RecipeList.swift */,
+				FBA965CA2361B15B00B7A632 /* RecipeDetail.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FB2006112361B09A000DC311 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBA965D42361B16500B7A632 /* FeaturedViewModel.swift */,
+				FBA965D52361B16500B7A632 /* RecipeRowViewModel.swift */,
+				FBA965D32361B16500B7A632 /* RecipeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBA965BB2361B13200B7A632 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				FBA965BC2361B14300B7A632 /* ApiService.swift */,
+				FBA965BD2361B14300B7A632 /* URLRequestConvertible.swift */,
+				FBA965C02361B14B00B7A632 /* RecipeRouter.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +235,7 @@
 				FB2006062361B072000DC311 /* LaunchScreen.storyboard in Resources */,
 				FB2006032361B072000DC311 /* Preview Assets.xcassets in Resources */,
 				FB2006002361B072000DC311 /* Assets.xcassets in Resources */,
+				FBA965C52361B15300B7A632 /* recipe.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,9 +246,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBA965D62361B16500B7A632 /* UserData.swift in Sources */,
+				FBA965CE2361B15B00B7A632 /* HomeView.swift in Sources */,
 				FB2005FA2361B071000DC311 /* AppDelegate.swift in Sources */,
+				FBA965CD2361B15B00B7A632 /* FeaturedList.swift in Sources */,
+				FBA965CF2361B15B00B7A632 /* LoadingView.swift in Sources */,
 				FB2005FC2361B071000DC311 /* SceneDelegate.swift in Sources */,
-				FB2005FE2361B071000DC311 /* ContentView.swift in Sources */,
+				FBA965BE2361B14300B7A632 /* ApiService.swift in Sources */,
+				FBA965D02361B15B00B7A632 /* RecipeDetail.swift in Sources */,
+				FBA965D12361B15B00B7A632 /* RecipeList.swift in Sources */,
+				FBA965E32361B23200B7A632 /* FavoriteList.swift in Sources */,
+				FBA965C32361B14B00B7A632 /* Recipe.swift in Sources */,
+				FBA965D82361B16500B7A632 /* FeaturedViewModel.swift in Sources */,
+				FBA965D72361B16500B7A632 /* RecipeViewModel.swift in Sources */,
+				FBA965CC2361B15B00B7A632 /* FavoriteButton.swift in Sources */,
+				FBA965BF2361B14300B7A632 /* URLRequestConvertible.swift in Sources */,
+				FB5653C62361C50F00472FE8 /* CategoryList.swift in Sources */,
+				FBA965C22361B14B00B7A632 /* RecipeRouter.swift in Sources */,
+				FBA965E52361B2C300B7A632 /* ExploreView.swift in Sources */,
+				FBA965D92361B16500B7A632 /* RecipeRowViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +401,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Tadımlık/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"src/Preview Content\"";
 				DEVELOPMENT_TEAM = 74NMDHX448;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tadımlık/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/src/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tadimlik.ios.Tad-ml-k";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tadimlik.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,15 +422,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"Tadımlık/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"src/Preview Content\"";
 				DEVELOPMENT_TEAM = 74NMDHX448;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Tadımlık/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/src/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tadimlik.ios.Tad-ml-k";
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tadimlik.ios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
