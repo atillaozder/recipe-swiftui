@@ -8,52 +8,28 @@
 
 import SwiftUI
 
-extension Edge.Set {
-    static var allExceptBottom: Edge.Set {
-        return .init(arrayLiteral: .top, .leading, .trailing)
-    }
-    
-    static var topBot: Edge.Set {
-        return .init(arrayLiteral: .top, .bottom)
-    }
-    
-    static var leftRight: Edge.Set {
-        return .init(arrayLiteral: .leading, .trailing)
-    }
-}
-
-extension Color {
-    static var background: Color {
-        return Color(red: 250/255, green: 250/255, blue: 250/255)
-    }
-}
-
-extension EdgeInsets {
-    static func bottom(_ padding: CGFloat) -> EdgeInsets {
-        return .init(top: 0, leading: 0, bottom: padding, trailing: 0)
-    }
-}
-
 struct FeaturedList: View {
     
+    @EnvironmentObject var userData: UserData
     @ObservedObject var viewModel: FeaturedViewModel = FeaturedViewModel()
     
     var body: some View {
         NavigationView {
-            if viewModel.isEmpty {
-                LoadingView()
-                    .navigationBarTitle(Text("Featured"))
-                    .onAppear(perform: viewModel.load)
-            } else {
-                ScrollView(.vertical, showsIndicators: true) {
-                    FeaturedHRow(dataSource: viewModel.main)
-                    ForEach(viewModel.categories) { viewModel in
-                        FeaturedVRow(viewModel: viewModel)
+            ScrollView(.vertical, showsIndicators: true) {
+                ZStack {
+                    LoadingView(isLoading: $viewModel.isLoading)
+                
+                    VStack(alignment: .leading, spacing: 8) {
+                        FeaturedHRow(dataSource: viewModel.main)
+                        ForEach(viewModel.categories) { viewModel in
+                            FeaturedVRow(viewModel: viewModel)
+                        }
+                        .listRowInsets(.bottom(16))
                     }
-                    .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 16, trailing: 0))
                 }
-                .navigationBarTitle(Text("Featured"))
             }
+            .navigationBarTitle(Text("Featured"))
+            .onAppear(perform: viewModel.load)
         }
     }
 }
@@ -88,6 +64,7 @@ struct FeaturedHRow: View {
 
 struct FeaturedVRow: View {
     
+    @EnvironmentObject var userData: UserData
     var viewModel: FeaturedCategoryViewModel
     
     var padding: CGFloat {
@@ -96,7 +73,7 @@ struct FeaturedVRow: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: padding) {
-            NavigationLink(destination: Text(viewModel.title)) {
+            NavigationLink(destination: FeaturedCategoryList(viewModel: viewModel)) {
                 HStack(alignment: .center) {
                     Text(viewModel.title)
                         .font(.system(size: 22, weight: .semibold))
@@ -112,7 +89,7 @@ struct FeaturedVRow: View {
             }
             .buttonStyle(PlainButtonStyle())
             
-            ForEach(viewModel.dataSource) { viewModel in
+            ForEach(viewModel.filteredDataSource) { viewModel in
                 NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
                     HStack(alignment: .center, spacing: 12) {
                         Image(viewModel.image)
@@ -144,5 +121,33 @@ struct FeaturedVRow: View {
             }
         }
         .padding()
+    }
+}
+
+#warning("Duplicate RecipeList")
+struct FeaturedCategoryList: View {
+    
+    @EnvironmentObject var userData: UserData
+    var viewModel: FeaturedCategoryViewModel
+    
+    var body: some View {
+        ScrollView(.vertical, showsIndicators: true) {
+            VStack(alignment: .leading, spacing: 0) {
+                ForEach(self.viewModel.dataSource) { viewModel in
+                    ZStack(alignment: .topTrailing) {
+                        NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
+                            RecipeRow(viewModel: viewModel)
+                        }
+                        .padding(.bottom, 8)
+                        .buttonStyle(PlainButtonStyle())
+
+                        FavoriteButton(viewModel: viewModel, color: .white)
+                            .padding()
+                    }
+                }
+                .padding(.allExceptBottom)
+            }
+        }
+        .navigationBarTitle(Text(viewModel.title), displayMode: .inline)
     }
 }

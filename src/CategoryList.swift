@@ -8,18 +8,18 @@
 
 import SwiftUI
 
+#warning("Duplicate RecipeList")
 struct CategoryList: View {
     
     @EnvironmentObject var userData: UserData
     @ObservedObject var viewModel: CategoryViewModel
     
     var body: some View {
-        GeometryReader { geometry in
-            if self.viewModel.isEmpty {
-                LoadingView()
-                    .frame(width: geometry.size.width)
-            } else {
-                ScrollView(.vertical, showsIndicators: true) {
+        ScrollView(.vertical, showsIndicators: true) {
+            ZStack {
+                LoadingView(isLoading: $viewModel.isLoading)
+                
+                VStack(alignment: .leading, spacing: 0) {
                     ForEach(self.viewModel.dataSource) { viewModel in
                         ZStack(alignment: .topTrailing) {
                             NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
@@ -32,7 +32,7 @@ struct CategoryList: View {
                                 .padding()
                         }
                     }
-                    .padding()
+                    .padding(.allExceptBottom)
                 }
             }
         }
@@ -46,6 +46,8 @@ import Combine
 class CategoryViewModel: ObservableObject {
     
     @Published private(set) var dataSource: [RecipeRowViewModel] = []
+    @Published var isLoading: Bool = true
+    
     private var disposables = Set<AnyCancellable>()
     private var category: Recipe.Category
     
@@ -59,6 +61,9 @@ class CategoryViewModel: ObservableObject {
     
     init(category: Recipe.Category) {
         self.category = category
+        
+        #warning("Related EnvironmentObject changes")
+        self.load()
     }
     
     func load() {
@@ -81,7 +86,7 @@ class CategoryViewModel: ObservableObject {
                 case .failure:
                     self.dataSource = []
                 case .finished:
-                    break
+                    self.isLoading = false
                 }
             },
             receiveValue: { [weak self] dataSource in

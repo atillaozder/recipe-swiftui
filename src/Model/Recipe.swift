@@ -32,15 +32,38 @@ struct Recipe: Identifiable, Hashable, Codable {
     let id: Int
     let name, image, time: String
     let materials, definition, preparation: String
-    let rate, totalRate: Double
-    let loggedUserRate: Double?
+    var rate, totalRateCount: Double
     let category: Recipe.Category
+    
+    var loggedUserRate: Int? {
+        willSet {
+            var totalRate = self.rate * self.totalRateCount
+
+            if let newRate = newValue {
+                if let previousRate = loggedUserRate {
+                    totalRate -= Double(previousRate)
+                } else {
+                    totalRateCount += 1
+                }
+                
+                totalRate += Double(newRate)
+            } else {
+                if let previousRate = loggedUserRate {
+                    totalRate -= Double(previousRate)
+                }
+                totalRateCount -= 1
+            }
+            
+            let value = totalRate / totalRateCount
+            self.rate = round(value * 10) / 10
+        }
+    }
 
     enum CodingKeys: String, CodingKey {
         case id, name, image, time, rate
         case materials, definition, preparation
         case category
-        case totalRate = "total_rate"
+        case totalRateCount = "total_rate"
         case loggedUserRate = "user_rate"
     }
     
@@ -121,7 +144,7 @@ struct Recipe: Identifiable, Hashable, Codable {
         self.time = "15dk"
         self.rate = 8.2
         self.loggedUserRate = 8
-        self.totalRate = 112525
+        self.totalRateCount = 112525
     }
 }
 

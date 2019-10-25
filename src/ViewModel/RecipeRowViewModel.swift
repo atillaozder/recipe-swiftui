@@ -46,14 +46,28 @@ class RecipeRowViewModel: ObservableObject, Identifiable {
     }
     
     var totalRate: String {
-        return NumberFormatter.localizedString(from: NSNumber(value: recipe.totalRate), number: .decimal)
+        return NumberFormatter
+            .localizedString(from: NSNumber(value: recipe.totalRateCount), number: .decimal)
     }
     
-    var loggedUserRate: String {
-        return "\(recipe.loggedUserRate ?? 0)"
+    var userRate: Int {
+        return recipe.loggedUserRate ?? 0
+    }
+    
+    var userHasRate: Bool {
+        return recipe.loggedUserRate != nil
+    }
+    
+    var userRateText: String {
+        return userHasRate ? "Sen" : "Puanla"
     }
     
     init(recipe: Recipe) {
         self.recipe = recipe
+    }
+    
+    func rate(_ value: Int?) {
+        #warning("ApiRequest to rate recipe")
+        self.recipe.loggedUserRate = value
     }
 }

@@ -12,14 +12,14 @@ import Combine
 class RecipeViewModel: ObservableObject {
     
     @Published var dataSource: [RecipeRowViewModel] = []
+    @Published var isLoading: Bool = true
+    
     private var disposables = Set<AnyCancellable>()
     
     var isEmpty: Bool {
         return dataSource.isEmpty
     }
     
-    init() {}
-
     func load() {
         fetchRecipes()
     }
@@ -38,7 +38,7 @@ class RecipeViewModel: ObservableObject {
                 case .failure:
                     self.dataSource = []
                 case .finished:
-                    break
+                    self.isLoading = false
                 }
             },
             receiveValue: { [weak self] dataSource in

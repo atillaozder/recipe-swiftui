@@ -13,6 +13,8 @@ class FeaturedViewModel: ObservableObject {
     
     @Published var main: [RecipeRowViewModel] = []
     @Published var categories: [FeaturedCategoryViewModel] = []
+    @Published var isLoading: Bool = true
+
     private var disposables = Set<AnyCancellable>()
     
     var isEmpty: Bool {
@@ -40,7 +42,7 @@ class FeaturedViewModel: ObservableObject {
                     self.main = []
                     self.categories = []
                 case .finished:
-                    break
+                    self.isLoading = false
                 }
             },
             receiveValue: { [weak self] pair in
@@ -48,7 +50,7 @@ class FeaturedViewModel: ObservableObject {
                 self.main = pair.main
                 self.categories = pair.categories
         })
-            .store(in: &disposables)
+            .store(in: &self.disposables)
     }
 }
 
@@ -56,12 +58,14 @@ class FeaturedCategoryViewModel: Identifiable {
     private var featuredCategory: FeaturedCategory
     
     var dataSource: [RecipeRowViewModel]
+    var filteredDataSource: [RecipeRowViewModel]
     var title: String {
         return featuredCategory.categoryName
     }
     
     init(featuredCategory: FeaturedCategory) {
         self.featuredCategory = featuredCategory
-        self.dataSource = featuredCategory.items[0...2].map(RecipeRowViewModel.init)
+        self.dataSource = featuredCategory.items.map(RecipeRowViewModel.init)
+        self.filteredDataSource = Array(dataSource[0...2])
     }
 }

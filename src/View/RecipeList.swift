@@ -1,5 +1,5 @@
 //
-//  RecipeView.swift
+//  RecipeList.swift
 //  Tadımlık
 //
 //  Created by Atilla Özder on 21.10.2019.
@@ -14,12 +14,11 @@ struct RecipeList: View {
     @ObservedObject var viewModel: RecipeViewModel
     
     var body: some View {
-        GeometryReader { geometry in
-            if self.viewModel.isEmpty {
-                LoadingView()
-                    .frame(width: geometry.size.width)
-            } else {
-                ScrollView(.vertical, showsIndicators: true) {
+        ScrollView(.vertical, showsIndicators: true) {
+            ZStack {
+                LoadingView(isLoading: $viewModel.isLoading)
+                
+                VStack(alignment: .leading, spacing: 0) {
                     ForEach(self.viewModel.dataSource) { viewModel in
                         ZStack(alignment: .topTrailing) {
                             NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
@@ -32,7 +31,7 @@ struct RecipeList: View {
                                 .padding()
                         }
                     }
-                    .padding()
+                    .padding(.allExceptBottom)
                 }
             }
         }

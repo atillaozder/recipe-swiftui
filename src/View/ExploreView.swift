@@ -40,8 +40,8 @@ struct ExploreView: View {
                     }
                 }
                 .padding()
-                .navigationBarTitle("Categories")
             }
+            .navigationBarTitle(Text("Categories"))
         }
     }
     

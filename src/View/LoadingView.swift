@@ -9,21 +9,18 @@
 import SwiftUI
 
 struct LoadingView: View {
+    
+    @Binding var isLoading: Bool
 
     var body: some View {
-        VStack {
-            Spacer()
-            ActivityIndicator(isAnimating: .constant(true), style: .medium)
-                .foregroundColor(Color.primary)
-            Spacer()
-        }
+        ActivityIndicator(isAnimating: self.$isLoading, style: .medium)
     }
 }
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            LoadingView()
+            LoadingView(isLoading: .constant(true))
                 .edgesIgnoringSafeArea(.all)
         }
     }

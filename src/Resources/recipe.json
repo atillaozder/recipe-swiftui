@@ -11,8 +11,8 @@
                 "preparation": "This is how to get breading to stay on chicken. Set up a dredging station to minimize mess and make cleanup easy.\n\nPut your ingredients and mixtures into large shallow bowls or baking dishes. Then work in one direction (left to right, for example), moving from seasoned flour to egg batter over to bread crumbs/panko/coating mixture.\n\nThis dry-wet-dry method helps the ingredients stick to the chicken pieces. Have one wet hand and one dry hand -- and use your wet hand to transfer chicken from the wet mixture to the coating bowl.\n\nPlace the coated chicken on the parchment- or wax paper-lined baking sheet. Before easing the coated chicken pieces into hot fat, allow them to rest, which will give the coating a chance to adhere.\n\nDo this step in the refrigerator if you won't be frying the chicken within half an hour. (Allow the cold chicken to come to room temperature before frying or the oil temperature will drop and the chicken will cook unevenly and the coating won't get crispy.)",
                 "time": "15dk",
                 "rate": 4.2,
-                "total_rate": 18252,
-                "user_rate": 8.2
+                "total_rate": 5,
+                "user_rate": 8
             },
             {
                 "id": 1,
@@ -43,7 +43,7 @@
                         "time": "15dk",
                         "rate": 4.2,
                         "total_rate": 18252,
-                        "user_rate": 8.2
+                        "user_rate": 5
                     },
                     {
                         "id": 1,
@@ -88,7 +88,7 @@
             "time": "15dk",
             "rate": 4.2,
             "total_rate": 18252,
-            "user_rate": 8.2
+            "user_rate": 8
         },
         {
             "id": 1,
