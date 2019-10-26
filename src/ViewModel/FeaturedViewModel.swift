@@ -11,7 +11,7 @@ import Combine
 
 class FeaturedViewModel: ObservableObject {
     
-    @Published var main: [RecipeRowViewModel] = []
+    @Published var main: [RecipeViewModel] = []
     @Published var categories: [FeaturedCategoryViewModel] = []
     @Published var isLoading: Bool = true
 
@@ -28,8 +28,8 @@ class FeaturedViewModel: ObservableObject {
     private func fetchRecipes() {
         ApiService.shared()
             .fetch(with: RecipeRouter.all, decoding: RecipeData.self)
-            .map { (response) -> (main: [RecipeRowViewModel], categories: [FeaturedCategoryViewModel]) in
-                let main = response.featured.main.map(RecipeRowViewModel.init)
+            .map { (response) -> (main: [RecipeViewModel], categories: [FeaturedCategoryViewModel]) in
+                let main = response.featured.main.map(RecipeViewModel.init)
                 let categories = response.featured.categories.map(FeaturedCategoryViewModel.init)
                 return (main, categories)
         }
@@ -57,15 +57,15 @@ class FeaturedViewModel: ObservableObject {
 class FeaturedCategoryViewModel: Identifiable {
     private var featuredCategory: FeaturedCategory
     
-    var dataSource: [RecipeRowViewModel]
-    var filteredDataSource: [RecipeRowViewModel]
+    var dataSource: [RecipeViewModel]
+    var filteredDataSource: [RecipeViewModel]
     var title: String {
         return featuredCategory.categoryName
     }
     
     init(featuredCategory: FeaturedCategory) {
         self.featuredCategory = featuredCategory
-        self.dataSource = featuredCategory.items.map(RecipeRowViewModel.init)
+        self.dataSource = featuredCategory.items.map(RecipeViewModel.init)
         self.filteredDataSource = Array(dataSource[0...2])
     }
 }

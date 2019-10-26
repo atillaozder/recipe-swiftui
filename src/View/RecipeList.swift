@@ -11,7 +11,7 @@ import SwiftUI
 struct RecipeList: View {
     
     @EnvironmentObject var userData: UserData
-    @ObservedObject var viewModel: RecipeViewModel
+    @ObservedObject var viewModel: RecipeListViewModel
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -45,46 +45,6 @@ struct RecipeList_Previews: PreviewProvider {
             RecipeList(viewModel: .init())
                 .environmentObject(UserData())
                 .navigationBarTitle("List View")
-        }
-    }
-}
-
-struct RecipeRow: View {
-    
-    var viewModel: RecipeRowViewModel
-    
-    var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Image(viewModel.image)
-                .resizable()
-                .scaledToFill()
-                .frame(height: 200)
-                .clipped()
-                .background(Color.gray)
-                .cornerRadius(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(lineWidth: 0.1)
-            )
-            
-            Rectangle()
-                .frame(height: 200)
-                .opacity(0.25)
-                .blur(radius: 10)
-                .cornerRadius(10)
-            
-            VStack(alignment: .leading, spacing: 2) {
-                Text(viewModel.name)
-                    .foregroundColor(Color.white)
-                    .font(Font.largeTitle.weight(.semibold))
-                    .lineLimit(2)
-                
-                Text(viewModel.category)
-                    .foregroundColor(Color.white)
-                    .font(.headline)
-                    .lineLimit(1)
-            }
-            .padding()
         }
     }
 }

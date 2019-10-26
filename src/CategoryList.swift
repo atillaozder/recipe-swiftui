@@ -25,7 +25,6 @@ struct CategoryList: View {
                             NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
                                 RecipeRow(viewModel: viewModel)
                             }
-                            .padding(.bottom, 8)
                             .buttonStyle(PlainButtonStyle())
 
                             FavoriteButton(viewModel: viewModel, color: .white)
@@ -34,6 +33,7 @@ struct CategoryList: View {
                     }
                     .padding(.allExceptBottom)
                 }
+                .padding(.bottom)
             }
         }
         .onAppear(perform: viewModel.load)
@@ -45,7 +45,7 @@ import Combine
 
 class CategoryViewModel: ObservableObject {
     
-    @Published private(set) var dataSource: [RecipeRowViewModel] = []
+    @Published private(set) var dataSource: [RecipeViewModel] = []
     @Published var isLoading: Bool = true
     
     private var disposables = Set<AnyCancellable>()
@@ -73,10 +73,10 @@ class CategoryViewModel: ObservableObject {
     private func fetchRecipes() {
         ApiService.shared()
             .fetch(with: RecipeRouter.all, decoding: RecipeData.self)
-            .map { (response) -> [RecipeRowViewModel] in
+            .map { (response) -> [RecipeViewModel] in
                 return response.recipes
                     .filter({ $0.category.rawValue == self.category.rawValue })
-                    .map(RecipeRowViewModel.init)
+                    .map(RecipeViewModel.init)
         }
         .receive(on: DispatchQueue.main)
         .sink(

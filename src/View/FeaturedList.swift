@@ -18,14 +18,14 @@ struct FeaturedList: View {
             ScrollView(.vertical, showsIndicators: true) {
                 ZStack {
                     LoadingView(isLoading: $viewModel.isLoading)
-                
+                    
                     VStack(alignment: .leading, spacing: 8) {
-                        FeaturedHRow(dataSource: viewModel.main)
+                        FeaturedHRow(viewModel: viewModel)
                         ForEach(viewModel.categories) { viewModel in
                             FeaturedVRow(viewModel: viewModel)
                         }
-                        .listRowInsets(.bottom(16))
                     }
+                    .padding(.bottom, 16)
                 }
             }
             .navigationBarTitle(Text("Featured"))
@@ -42,12 +42,12 @@ struct FeaturedList_Previews: PreviewProvider {
 
 struct FeaturedHRow: View {
     
-    var dataSource: [RecipeRowViewModel]
+    @ObservedObject var viewModel: FeaturedViewModel
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(alignment: .top, spacing: 16) {
-                ForEach(dataSource) { viewModel in
+                ForEach(viewModel.main) { viewModel in
                     NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
                         RecipeRow(viewModel: viewModel)
                             .frame(width: 380)
@@ -120,7 +120,7 @@ struct FeaturedVRow: View {
                 .buttonStyle(PlainButtonStyle())
             }
         }
-        .padding()
+        .padding(.allExceptBottom)
     }
 }
 
@@ -138,7 +138,6 @@ struct FeaturedCategoryList: View {
                         NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
                             RecipeRow(viewModel: viewModel)
                         }
-                        .padding(.bottom, 8)
                         .buttonStyle(PlainButtonStyle())
 
                         FavoriteButton(viewModel: viewModel, color: .white)
@@ -147,6 +146,7 @@ struct FeaturedCategoryList: View {
                 }
                 .padding(.allExceptBottom)
             }
+            .padding(.bottom)
         }
         .navigationBarTitle(Text(viewModel.title), displayMode: .inline)
     }

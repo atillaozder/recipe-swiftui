@@ -16,7 +16,7 @@ struct FavoriteList: View {
 
     var body: some View {
         NavigationView {
-            ScrollView(.vertical, showsIndicators: true) {
+            ScrollView(.vertical, showsIndicators: true) {                
                 ZStack {
                     LoadingView(isLoading: $viewModel.isLoading)
                     
@@ -26,7 +26,6 @@ struct FavoriteList: View {
                                 NavigationLink(destination: RecipeDetail(viewModel: viewModel)) {
                                     RecipeRow(viewModel: viewModel)
                                 }
-                                .padding(.bottom, 8)
                                 .buttonStyle(PlainButtonStyle())
 
                                 FavoriteButton(viewModel: viewModel, color: .white)
@@ -35,6 +34,7 @@ struct FavoriteList: View {
                         }
                         .padding(.allExceptBottom)
                     }
+                    .padding(.bottom)
                 }
             }
             .onAppear(perform: viewModel.load)
@@ -53,7 +53,7 @@ struct FavoriteList_Previews: PreviewProvider {
 
 class FavoriteViewModel: ObservableObject {
     
-    @Published var dataSource: [RecipeRowViewModel] = []
+    @Published var dataSource: [RecipeViewModel] = []
     @Published var isLoading: Bool = true
         
     var isEmpty: Bool {
@@ -65,7 +65,7 @@ class FavoriteViewModel: ObservableObject {
     }
     
     func load() {
-        self.dataSource = UserData().favorites.map(RecipeRowViewModel.init)
+        self.dataSource = UserData().favorites.map(RecipeViewModel.init)
         self.isLoading = false
     }
 }

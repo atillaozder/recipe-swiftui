@@ -11,7 +11,7 @@ import SwiftUI
 struct FavoriteButton: View {
     
     @EnvironmentObject var userData: UserData
-    var viewModel: RecipeRowViewModel
+    var viewModel: RecipeViewModel
     var color: Color
     
     var body: some View {
@@ -37,9 +37,8 @@ struct FavoriteButton: View {
 
 struct FavoriteButton_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            FavoriteButton(viewModel: .init(recipe: .init()), color: .black)
-                .environmentObject(UserData())
-        }
+        FavoriteButton(viewModel: .init(recipe: .init()), color: .black)
+            .environmentObject(UserData())
+            .previewLayout(.sizeThatFits)
     }
 }

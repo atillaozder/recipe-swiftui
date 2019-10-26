@@ -70,65 +70,35 @@ struct Recipe: Identifiable, Hashable, Codable {
     enum Category: String, CaseIterable, Hashable, Codable {
         case soup
         case meat
-        case vegetables
+        case fish
         case pizza
         case sandwich
         case pasta
-        case dessert
         case salad
-        case coffee
+        case vegan
+        case hamburger
+        case drink
+        case cake
+        case fruit
+        case dessert
+        case vegetables
+        case snack
         
         var asImage: Image {
-            switch self {
-            case .meat:
-                return .init("meat")
-            case .soup:
-                return .init("soup")
-            case .vegetables:
-                return .init("vegetables")
-            case .pizza:
-                return .init("pizza")
-            case .sandwich:
-                return .init("sandwich")
-            case .pasta:
-                return .init("pasta")
-            case .dessert:
-                return .init("donut")
-            case .salad:
-                return .init("salad")
-            case .coffee:
-                return .init("coffee")
-            }
+            return .init(self.rawValue)
         }
         
         var title: String {
-            switch self {
-            case .meat:
-                return "Meat & Fish"
-            case .soup:
-                return "Soup"
-            case .vegetables:
-                return "Vegetables"
-            case .pizza:
-                return "Pizza"
-            case .sandwich:
-                return "Sandwich"
-            case .pasta:
-                return "Pasta"
-            case .dessert:
-                return "Dessert"
-            case .salad:
-                return "Salad"
-            case .coffee:
-                return "Coffee"
-            }
+            return self.rawValue.capitalized(with: .current)
         }
         
         static var grouping: [Int: [Category]] {
             return [
-                0: [.meat, .pizza, .sandwich],
-                1: [.vegetables, .salad, .pasta],
-                2: [.soup, .dessert, .coffee],
+                0: [.meat, .fish, .vegan],
+                1: [.salad, .fruit, .vegetables],
+                2: [.pizza, .hamburger, .sandwich],
+                3: [.soup, .pasta, .snack],
+                4: [.dessert, .cake, .drink]
             ]
         }
     }

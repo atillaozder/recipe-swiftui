@@ -2,49 +2,72 @@
 //  RecipeViewModel.swift
 //  Tadımlık
 //
-//  Created by Atilla Özder on 22.10.2019.
+//  Created by Atilla Özder on 23.10.2019.
 //  Copyright © 2019 Atilla Özder. All rights reserved.
 //
 
 import SwiftUI
 import Combine
 
-class RecipeViewModel: ObservableObject {
+class RecipeViewModel: ObservableObject, Identifiable {
     
-    @Published var dataSource: [RecipeRowViewModel] = []
-    @Published var isLoading: Bool = true
+    @Published private(set) var recipe: Recipe
     
-    private var disposables = Set<AnyCancellable>()
-    
-    var isEmpty: Bool {
-        return dataSource.isEmpty
+    var name: String {
+        return recipe.name
     }
     
-    func load() {
-        fetchRecipes()
+    var image: String {
+        return recipe.image
     }
-
-    private func fetchRecipes() {
-        ApiService.shared()
-            .fetch(with: RecipeRouter.all, decoding: RecipeData.self)
-            .map { (response) -> [RecipeRowViewModel] in
-                return response.recipes.map(RecipeRowViewModel.init)
-        }
-        .receive(on: DispatchQueue.main)
-        .sink(
-            receiveCompletion: { [weak self] value in
-                guard let self = self else { return }
-                switch value {
-                case .failure:
-                    self.dataSource = []
-                case .finished:
-                    self.isLoading = false
-                }
-            },
-            receiveValue: { [weak self] dataSource in
-                guard let self = self else { return }
-                self.dataSource = dataSource
-        })
-            .store(in: &disposables)
+    
+    var category: String {
+        return recipe.category.title
+    }
+    
+    var time: String {
+        return recipe.time
+    }
+    
+    var materials: [String] {
+        return recipe.materials.components(separatedBy: ",")
+    }
+    
+    var preparation: String {
+        return recipe.preparation
+    }
+    
+    var definition: String {
+        return recipe.definition
+    }
+    
+    var rate: String {
+        return "\(recipe.rate)"
+    }
+    
+    var totalRate: String {
+        return NumberFormatter
+            .localizedString(from: NSNumber(value: recipe.totalRateCount), number: .decimal)
+    }
+    
+    var userRate: Int {
+        return recipe.loggedUserRate ?? 0
+    }
+    
+    var userHasRate: Bool {
+        return recipe.loggedUserRate != nil
+    }
+    
+    var userRateText: String {
+        return userHasRate ? "Sen" : "Puanla"
+    }
+    
+    init(recipe: Recipe) {
+        self.recipe = recipe
+    }
+    
+    func rate(_ value: Int?) {
+        #warning("ApiRequest to rate recipe")
+        self.recipe.loggedUserRate = value
     }
 }

@@ -19,10 +19,8 @@ struct LoadingView: View {
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            LoadingView(isLoading: .constant(true))
-                .edgesIgnoringSafeArea(.all)
-        }
+        LoadingView(isLoading: .constant(true))
+            .previewLayout(.sizeThatFits)
     }
 }
 

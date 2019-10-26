@@ -9,6 +9,7 @@
 import Foundation
 
 enum RecipeRouter {
+    case featured
     case all
 }
 

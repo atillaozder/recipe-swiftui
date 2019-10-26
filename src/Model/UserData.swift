@@ -19,7 +19,7 @@ final class UserData: ObservableObject {
         }
     }
         
-    func toggleFavorite(_ viewModel: RecipeRowViewModel) {
+    func toggleFavorite(_ viewModel: RecipeViewModel) {
         if contains(viewModel) {
             favorites.remove(viewModel.recipe)
         } else {
@@ -27,7 +27,7 @@ final class UserData: ObservableObject {
         }
     }
     
-    func contains(_ viewModel: RecipeRowViewModel) -> Bool {
+    func contains(_ viewModel: RecipeViewModel) -> Bool {
         return contains(viewModel.recipe)
     }
     
