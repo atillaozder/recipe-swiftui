@@ -56,9 +56,9 @@ struct FeaturedHRow: View {
                     .buttonStyle(PlainButtonStyle())
                 }
             }
+            .frame(height: 200)
             .padding(.allExceptBottom)
         }
-        .frame(height: 200)
     }
 }
 

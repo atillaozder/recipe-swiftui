@@ -24,6 +24,8 @@ struct ExploreView: View {
                                 NavigationLink(destination: CategoryList(viewModel: .init(category: category))) {
                                     VStack(alignment: .center, spacing: 12) {
                                         category.asImage
+                                            .aspectRatio(contentMode: .fit)
+                                        
                                         Text(category.title)
                                             .font(.footnote)
                                     }
