@@ -1,6 +1,6 @@
 //
 //  UserData.swift
-//  Tadımlık
+//  RecipeSwiftUI
 //
 //  Created by Atilla Özder on 23.10.2019.
 //  Copyright © 2019 Atilla Özder. All rights reserved.
